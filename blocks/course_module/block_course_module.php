@@ -34,9 +34,9 @@ class block_course_module extends block_list {
     }
 
     function get_content() {
-        global $CFG, $USER, $DB, $OUTPUT;
+        global $CFG;
 
-        if ($this->content !== NULL) {
+        if ($this->content !== null) {
             return $this->content;
         }
 
@@ -63,6 +63,12 @@ class block_course_module extends block_list {
         return $this->content;
     }
 
+    /**
+     * This function returns the course modules with their ID and type
+     * 
+     * @global type $DB
+     * @return array
+     */
     function get_course_module() {
         global $DB;
 
